@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "serve -s dist -l 3007"
+    "start": "serve -s dist -l 3018"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.3.1",
