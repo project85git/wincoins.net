@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #18181B;
+}
+/* Hide scrollbar for all browsers */
+.scrollbar-hide {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* WebKit */
+  }
