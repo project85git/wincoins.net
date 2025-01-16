@@ -51,14 +51,14 @@ const Carousel = () => {
   return (
     <div
       ref={carouselRef}
-      className="flex w-[80%]  space-x-2 overflow-x-scroll scrollbar-hide"
+      className="flex w-[92%]  max-w-[1400px] space-x-2 overflow-x-scroll scrollbar-hide"
     >
       {logos.map((logo, index) => (
         <div
           key={index}
-          className="transition-transform duration-500 ease-in-out w-[140px] h-[80px] flex flex-col items-center justify-center rounded-[10px] bg-[#202024] text-white font-semibold shadow-md"
+          className="transition-transform duration-500 ease-in-out  lg:w-[180px] h-[80px] flex flex-col items-center justify-center rounded-[10px] bg-[#202024] text-white font-semibold shadow-md"
         >
-            <p className="w-[140px]"></p>
+            <p className="w-[180px]"></p>
           {logo}
         </div>
       ))}
