@@ -10,6 +10,10 @@ body{
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer 10+ */
   }
+  .scrollbar-stable {
+    scrollbar-gutter: stable;
+  }
+  
   
   .scrollbar-hide::-webkit-scrollbar {
     display: none; /* WebKit */
