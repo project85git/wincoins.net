@@ -2,14 +2,14 @@ import { useState } from "react";
 import GlobalInput from "../component/mainComponent.jsx/GlobalInput";
 import { Facebook, GoogleIcon } from "../assets/svg/Svg";
 import { FaCheckCircle, FaExclamationCircle } from "react-icons/fa";
-
+import {useNavigate} from "react-router-dom"
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
-
+        const navigate= useNavigate()
     const handleLogin = () => {
         let valid = true;
 
@@ -25,6 +25,11 @@ const Login = () => {
 
         if (valid) {
             console.log('Login attempt with:', { email, password });
+        }
+
+        if( email=="user" && password=="12345"){
+            navigate("/lobby")
+            localStorage.setItem('isUserAuth',true)
         }
     };
 
