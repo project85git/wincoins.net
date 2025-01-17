@@ -1,5 +1,5 @@
 import { useState } from "react";
-import GlobalInput from "../component/mainComponent.jsx/GlobalInput";
+import GlobalInput from "../component/mainComponent/GlobalInput";
 import { Facebook, GoogleIcon } from "../assets/svg/Svg";
 import { FaCheckCircle, FaExclamationCircle } from "react-icons/fa";
 import {useNavigate} from "react-router-dom"

@@ -7,7 +7,7 @@ const AllGameCategory = () => {
   const categoryData = useSelector(
     (state) => state?.reusableReducer?.gameCategory
   );
-  console.log(categoryData, "cstegoryData");
+  
 
   const handleFilterByCategory = () => {};
 

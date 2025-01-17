@@ -9,13 +9,13 @@ import { useLocation } from 'react-router-dom'
 import Sidebar from './component/pageComponent/Sidebar'
 import { fetchGetRequest } from './apiRequest.js/apiRequest'
 import { useDispatch } from 'react-redux'
-import { fetchGameCategory } from './redux/reusableData/action'
+import { fetchGameCategory, fetchProviderData, fetchSocialMediaData, paymentCurrencyData, singleUserDetails } from './redux/reusableData/action'
 
 function App() {
   const [count, setCount] = useState(0)
   const location = useLocation();
   const isAuth =localStorage.getItem('isUserAuth')
-
+const [loading,setLoading]=useState(false)
   const isHeaderFooterShow =
     location.pathname !== "/login" &&
     location.pathname !== "/sign-up" &&
