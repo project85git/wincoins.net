@@ -5,16 +5,17 @@
 body{
     background-color: #18181B;
 }
-/* Hide scrollbar for all browsers */
-.scrollbar-hide {
+.scrollbar-hide, .category-scroll {
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer 10+ */
-  }
+}
+
+.scrollbar-hide::-webkit-scrollbar,
+.category-scroll::-webkit-scrollbar {
+    display: none; /* WebKit */
+}
+
   .scrollbar-stable {
     scrollbar-gutter: stable;
   }
   
-  
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none; /* WebKit */
-  }

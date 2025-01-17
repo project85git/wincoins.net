@@ -1,5 +1,5 @@
 import React from 'react'
-import GlobalButton from '../mainComponent.jsx/GlobalButton'
+import GlobalButton from '../mainComponent/GlobalButton'
 import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
