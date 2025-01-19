@@ -37,7 +37,7 @@ const Sidebar = () => {
   return (
     <div
       style={{ width: isOpenMobileSidebar ? "100%" : "" }}
-      className="scrollbar-stable overflow-y-scroll  scrollbar-thin scrollbar-thumb-[#323232] scrollbar-track-[#323232] flex sticky top-0 h-full min-h-[100vh]"
+      className="scrollbar-stable overflow-y-scroll bg-[#202024]  scrollbar-thin scrollbar-thumb-[#323232] scrollbar-track-[#323232] flex sticky top-0 h-full min-h-[100vh]"
     >
       {/* Sidebar */}
 
@@ -47,7 +47,7 @@ const Sidebar = () => {
       
       ${
         showSidebar && !isOpenMobileSidebar ? "w-[280px]" : "w-[85px]"
-      } bg-[#202024] text-white  transition-all p-1 duration-300 h-[100vh] overflow-y-scroll scrollbar-thin scrollbar-thumb-[#323232] scrollbar-track-[#323232] scrollbar-stable`}
+      } bg-[#202024] text-white  transition-all p-1 duration-300  h-[90vh] lg:h-[100vh] overflow-y-scroll scrollbar-thin scrollbar-thumb-[#323232] scrollbar-track-[#323232] scrollbar-stable`}
       >
         {/* Toggle Button */}
         {!isOpenMobileSidebar && (
