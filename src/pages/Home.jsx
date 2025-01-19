@@ -112,7 +112,7 @@ const Home = () => {
         <h3 className="text-xl">Welcome to your new Favorite Place to Play</h3>
       </div>
 
-      <div className="mt-4 max-w-[1400px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 w-[92%] justify-center gap-2">
+      <div className="mt-4  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 w-[92%] justify-center gap-2">
         {buttons.map((button, index) => (
           <button
             key={index}

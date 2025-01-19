@@ -10,7 +10,7 @@ import {
   GET_SINGLE_USERDETAILS,
   SHOW_SIDEBAR,
   HALF_SIDEBAR,
-  OPEN_SECOND_SIDEBAR,
+  OPEN_MOBILE_SIDEBAR,
   SET_HIDE_FIRST_SIDEBAR,
   SET_BACK_SECOND_SIDEBARITEM,
   SET_ACTIVE_BOTTOM_TAB,
@@ -26,7 +26,7 @@ const initialState = {
   userDetails: SingleUserDetails||{},
   showSidebar: true,
   halfSidebar: false,
-  openSecondSidebar: false,
+  isOpenMobileSidebar: false,
   hideFirstSidebar: false,
   backSidebarItem: false,
   activeBottomTab: "",
@@ -73,10 +73,10 @@ const reusableReducer = (state = initialState, action) => {
         ...state,
         halfSidebar: action.payload,
       };
-    case OPEN_SECOND_SIDEBAR:
+    case OPEN_MOBILE_SIDEBAR:
       return {
         ...state,
-        openSecondSidebar: action.payload,
+        isOpenMobileSidebar: action.payload,
       };
     case SET_HIDE_FIRST_SIDEBAR:
       return {

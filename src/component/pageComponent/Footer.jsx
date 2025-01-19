@@ -21,10 +21,7 @@ const isAuth =localStorage.getItem('isUserAuth')
         <GlobalButton borderRadius="6px" height={"45px"} fontWeight="700" width="100%" bgColor="#3B81F6" text="Login" onClick={handleLoginRedirect}  />
         <GlobalButton  borderRadius="6px" height={"45px"} fontWeight="700" width="100%" bgColor="#16A349" text="Sign Up" onClick={handleSignUpRedirect}  />
 
-        </div>:
-        <div
-        className='flex items-center fixed bg-[#18181B] shadow-2xl p-4 bottom-0 w-full justify-between gap-4'
-        >aftr login</div>}
+        </div>:""}
         
     </div>
   )

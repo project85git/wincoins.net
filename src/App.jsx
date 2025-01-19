@@ -5,23 +5,21 @@ import './App.css'
 import Header from './component/pageComponent/Header'
 import AllRoute from './allRoute/AllRoute'
 import Footer from './component/pageComponent/Footer'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import Sidebar from './component/pageComponent/Sidebar'
 import { fetchGetRequest } from './apiRequest.js/apiRequest'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { fetchGameCategory, fetchProviderData, fetchSocialMediaData, paymentCurrencyData, singleUserDetails } from './redux/reusableData/action'
+import BottomPart from './component/pageComponent/BottomPart'
 
 function App() {
   const [count, setCount] = useState(0)
   const location = useLocation();
   const isAuth =localStorage.getItem('isUserAuth')
 const [loading,setLoading]=useState(false)
-  const isHeaderFooterShow =
-    location.pathname !== "/login" &&
-    location.pathname !== "/sign-up" &&
-    location.pathname !== "/reset-password";
-console.log(isHeaderFooterShow,"isHeaderFooterShow")
- 
+const {showSidebar,hideFirstSidebar,halfSidebar,isOpenMobileSidebar}=useSelector((state)=>state?.reusableReducer)
+  const navigate=useNavigate()
+
 const dispatch=useDispatch()
 const getCatgoryList = async () => {
   try {
@@ -109,22 +107,34 @@ useEffect(()=>{
   
 },[])
 
+const isHeaderFooterShow =
+location.pathname !== "/" &&
+  location.pathname !== "/login" &&
+  location.pathname !== "/sign-up" &&
+  location.pathname !== "/reset-password";
+
+
+  const isLoginAndReigiter =location.pathname !== "/login" &&location.pathname !== "/sign-up" &&
+    location.pathname !== "/reset-password";
+
   return (
-    <div className='flex   w-full '>
-     {isAuth&& <div className='border-r-4 border-[#323232]'>
-     <Sidebar/>
+    <div className=' lg:flex '>
+     {(isHeaderFooterShow)&& <div className={` hidden lg:contents ${showSidebar?"w-[19.5%]":""} `}>
+        <Sidebar/>
       </div>}
-      <div className='w-full '>
-      {isHeaderFooterShow&&
-      <div className='w-full'>
-      <Header/>
-      </div>}
+      <div className={`  ${(showSidebar&&isHeaderFooterShow)?"lg:w-[80%]":"w-full"} `}>
+      <div className=''>
+      {isLoginAndReigiter&&<Header/>}
+      </div>
       <div className='w-[100%] flex items-center justify-center'>
       <AllRoute/>
 
       </div>
-      {isHeaderFooterShow&&<div className='lg:hidden contents'>
-        <Footer/>
+    <div className='lg:hidden contents'>
+       {isLoginAndReigiter&& <Footer/>}
+      </div>
+     {isLoginAndReigiter&& <div className='w-full'>
+        <BottomPart/>
       </div>}
       </div>
 

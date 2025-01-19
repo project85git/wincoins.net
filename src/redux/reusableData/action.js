@@ -7,7 +7,7 @@ import {
   GET_SINGLE_USERDETAILS,
   SHOW_SIDEBAR,
   HALF_SIDEBAR,
-  OPEN_SECOND_SIDEBAR,
+  OPEN_MOBILE_SIDEBAR,
   SET_HIDE_FIRST_SIDEBAR,
   SET_BACK_SECOND_SIDEBARITEM,
   SET_ACTIVE_BOTTOM_TAB,
@@ -49,8 +49,8 @@ export const setHalfSideBar = (value) => ({
   type: HALF_SIDEBAR,
   payload: value,
 });
-export const setOpenSecondSidebar = (value) => ({
-  type: OPEN_SECOND_SIDEBAR,
+export const setMobileSidebar = (value) => ({
+  type: OPEN_MOBILE_SIDEBAR,
   payload: value,
 });
 
