@@ -5,12 +5,14 @@ import ProviderMapping from "../component/pageComponent/ProviderMapping";
 import GameByCategory from "../component/gameComponent/GameByCategory";
 import { useSelector } from "react-redux";
 import { FaGift } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 const Lobby = () => {
   const isAuth = localStorage.getItem("isUserAuth");
 
   const categoryData = useSelector(
     (state) => state?.reusableReducer?.gameCategory
   );
+  const navigate=useNavigate()
   console.log(categoryData, "cstegoryData");
   useEffect(() => {
     if (!isAuth) {

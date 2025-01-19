@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Carousel from '../component/pageComponent/Carousel'
 import triple777 from '../assets/images/illustration-games.png'
 import message from '../assets/images/illustration-help.png'
@@ -13,11 +13,13 @@ import GirlsBanner1 from '../assets/images/girlsbanner2.png'
 import bold from '../assets/images/bold.png'
 import roulete from '../assets/images/roulete.png'
 import slot from '../assets/images/slot.png'
+import { useNavigate } from 'react-router-dom'
 
 
 
 const Home = () => {
-    
+  const isAuth = localStorage.getItem("isUserAuth");
+    const navigate=useNavigate()
     const buttons = [
         { label: "Jackpots", bgColor: "bg-blue-500" },
         { label: "New Games", bgColor: "bg-purple-500" },
@@ -89,6 +91,11 @@ const Home = () => {
 
       const handleClick=()=>{
       }
+      useEffect(() => {
+        if (isAuth) {
+          navigate("/lobby");
+        }
+      }, [isAuth]);
 
   return (
     <div className="text-white mt-0 w-full flex flex-col items-center justify-center">

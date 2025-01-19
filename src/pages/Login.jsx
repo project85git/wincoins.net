@@ -48,7 +48,7 @@ const Login = () => {
     };
 
     return (
-        <div className="flex flex-col h-screen overflow-hidden">
+        <div className="flex flex-col h-[90vh] overflow-hidden">
             <div className="text-white w-full mt-3 flex flex-col items-center justify-center text-2xl font-bold">
                 <p className="text-3xl lg:text-4xl">
                     W<span className="text-blue-500">O</span>W
