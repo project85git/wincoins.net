@@ -118,22 +118,25 @@ location.pathname !== "/" &&
     location.pathname !== "/reset-password";
 
   return (
-    <div className=' lg:flex '>
-     {(isHeaderFooterShow)&& <div className={` hidden lg:contents ${showSidebar?"w-[19.5%]":""} `}>
-        <Sidebar/>
+    <div className='  lg:flex  '>
+     {(isHeaderFooterShow)&& <div className={` hidden lg:contents `}>
+      <div className={` ${showSidebar?"w-[280px]":"w-[85px]" } sticky top-0  `}>
+      <Sidebar/>
+
+      </div>
       </div>}
-      <div className={`  ${(showSidebar&&isHeaderFooterShow)?"lg:w-[80%]":"w-full"} `}>
-      <div className=''>
+      <div className={`  ${(showSidebar&&isHeaderFooterShow)?"lg:w-[80%] 3xl:w-[90%] ":"w-full"} `}>
+      <div className='w-full'>
       {isLoginAndReigiter&&<Header/>}
       </div>
-      <div className='w-[100%] flex items-center justify-center'>
+      <div className=' max-w-[1500px] mx-auto flex items-center justify-center'>
       <AllRoute/>
 
       </div>
     <div className='lg:hidden contents'>
        {isLoginAndReigiter&& <Footer/>}
       </div>
-     {isLoginAndReigiter&& <div className='w-full'>
+     {isLoginAndReigiter&& <div className='w-full relative  mt-[50px]'>
         <BottomPart/>
       </div>}
       </div>

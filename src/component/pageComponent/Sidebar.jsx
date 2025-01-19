@@ -37,7 +37,7 @@ const Sidebar = () => {
   return (
     <div
       style={{ width: isOpenMobileSidebar ? "100%" : "" }}
-      className="scrollbar-stable overflow-y-scroll bg-[#202024]  scrollbar-thin scrollbar-thumb-[#323232] scrollbar-track-[#323232] flex sticky top-0 h-full min-h-[100vh]"
+      className="scrollbar-stable overflow-y-scroll bg-[#202024]  scrollbar-thin scrollbar-thumb-[#323232] scrollbar-track-[#323232] flex sticky top-0 h-[100vh]"
     >
       {/* Sidebar */}
 

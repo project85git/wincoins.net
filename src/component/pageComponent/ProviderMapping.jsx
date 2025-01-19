@@ -90,7 +90,7 @@ const ProviderMapping = ({ apiProviderName }) => {
           <button
             onClick={handleScrollLeft}
             disabled={isLeftDisabled}
-            className={`transform bg-[#242427] text-white p-[8px] md:p-[10px] px-2 md:px-6 w-[40px] md:w-[55px] flex items-center justify-center rounded-[6px] shadow-lg z-10 ${
+            className={`transform bg-[#242427] text-white w-[40px] md:w-[55px] flex items-center justify-center rounded-[6px] shadow-lg z-10 ${
               isLeftDisabled ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >
@@ -99,7 +99,7 @@ const ProviderMapping = ({ apiProviderName }) => {
           <button
             onClick={handleScrollRight}
             disabled={isRightDisabled}
-            className={`transform bg-[#242427] text-white p-[8px] md:p-[10px] px-2 md:px-6 w-[40px] md:w-[55px] flex items-center justify-center rounded-[6px] shadow-lg z-10 ${
+            className={`transform bg-[#242427] text-white w-[40px] md:w-[55px] flex items-center justify-center rounded-[6px] shadow-lg z-10 ${
               isRightDisabled ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >

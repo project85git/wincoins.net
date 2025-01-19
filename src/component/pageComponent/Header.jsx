@@ -36,7 +36,9 @@ const handleCloseMobileSidebar=()=>{
 }
 
   return (
-    <div className="w-full bg-[#18181B] overflow-hidden">
+    <div className="w-full bg-[#18181B] flex items-center justify-center overflow-hidden">
+      <div className="max-w-[1500px] w-full"> 
+
       {isBeforeLoginPage ? (
         <div className="flex justify-between w-full items-center bg-[#18181B] p-2">
           <div className="lg:contents hidden">
@@ -160,6 +162,8 @@ const handleCloseMobileSidebar=()=>{
       </div>
       }
     </div>
+    </div>
+
   );
 };
 

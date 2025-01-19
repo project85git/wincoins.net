@@ -20,7 +20,7 @@ const Lobby = () => {
     }
   }, [isAuth]);
   return (
-    <div className="bg-[#18181B] flex flex-col max-w-[1300px] p-6 px-[10px]  w-full">
+    <div className="bg-[#18181B] flex flex-col p-6 px-[10px]  w-full">
       <p className="text-[#F3F4F6] text-sm">
         Welcome back,{" "}
         <span className="text-[#5FA5F9] font-bold">Username!</span>

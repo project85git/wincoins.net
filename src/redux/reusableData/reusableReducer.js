@@ -19,7 +19,7 @@ import {
 } from "./actionTypes";
 
 const initialState = {
-  socailMediaData: null,
+  socailMediaData: {},
   gameProvider: [],
   gameCategory: [],
   paymentCurrency: [],
