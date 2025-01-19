@@ -124,7 +124,7 @@ const GameByCategory = ({ categoryData }) => {
           <button
             onClick={handleScrollLeft}
             disabled={isLeftDisabled}
-            className={`transform bg-[#242427] text-white p-[10px] w-[55px] flex items-center justify-center rounded-[6px] shadow-lg z-10 ${
+            className={`transform bg-[#242427] text-white    w-[40px] md:w-[55px] flex items-center justify-center rounded-[6px] shadow-lg z-10 ${
               isLeftDisabled ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >
@@ -133,7 +133,7 @@ const GameByCategory = ({ categoryData }) => {
           <button
             onClick={handleScrollRight}
             disabled={isRightDisabled}
-            className={`transform bg-[#242427] text-white p-[10px] w-[55px] flex items-center justify-center rounded-[6px] shadow-lg z-10 ${
+            className={`transform bg-[#242427] text-white  w-[40px] md:w-[55px] flex items-center justify-center rounded-[6px] shadow-lg z-10 ${
               isRightDisabled ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >
@@ -142,7 +142,8 @@ const GameByCategory = ({ categoryData }) => {
           {allprovider.length > 6 && (
             <p
             //   onClick={() => navigate(`/game-provider/${encodeData(apiProviderName)}`)}
-              className="transform text-sm bg-[#242427] text-[#A1A1AA] p-[10px] px-6 flex items-center justify-center rounded-[6px] shadow-lg z-10"
+            className="transform text-xs md:text-sm bg-[#242427] text-[#A1A1AA] p-[4px] md:p-[10px] px-4 md:px-6 flex items-center justify-center rounded-[6px] shadow-lg z-10"
+
             >
               {`View all`}
             </p>
@@ -162,10 +163,10 @@ const GameByCategory = ({ categoryData }) => {
             <div
               key={item?._id}
               onClick={() => handleNavigateProvider(item)}
-              className="min-w-[175px] w-[260px]  relative cursor-pointer  duration-300 ease-in-out flex items-center justify-center  "
+              className=" min-w-[118px] md:min-w-[155px] w-[260px]  relative cursor-pointer  duration-300 ease-in-out flex items-center justify-center  "
             >
               <div className='hover:opacity-50 z-5 w-full   h-full relative '>
-              <img style={{borderRadius:"0px"}} src={item.image_url} alt={item.game_name} className="w-[100%] h-[230px] " />
+              <img style={{borderRadius:"4px"}} src={item.image_url} alt={item.game_name} className="w-[100%] h-[160px] md:h-[200px] " />
             </div>
 
               {/* <button className="bg-[#1D4FD9] text-sm text-white  py-2 px-4 translate-y-5 opacity-100 group-hover:translate-y-0 transition duration-300">

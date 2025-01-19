@@ -79,17 +79,18 @@ const ProviderMapping = ({ apiProviderName }) => {
     );
   };
 
+  
   return (
     <div className="w-[100%] relative mt-3">
       <div className="flex items-center justify-between w-[100%]">
-        <p className="text-white text-sm font-medium">
+        <p className="text-white text-xs md:text-sm font-medium">
           {`Game Provider`} ({allprovider?.length})
         </p>
         <div className="flex gap-2">
           <button
             onClick={handleScrollLeft}
             disabled={isLeftDisabled}
-            className={`transform bg-[#242427] text-white p-[10px] w-[55px] flex items-center justify-center rounded-[6px] shadow-lg z-10 ${
+            className={`transform bg-[#242427] text-white w-[40px] md:w-[55px] flex items-center justify-center rounded-[6px] shadow-lg z-10 ${
               isLeftDisabled ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >
@@ -98,7 +99,7 @@ const ProviderMapping = ({ apiProviderName }) => {
           <button
             onClick={handleScrollRight}
             disabled={isRightDisabled}
-            className={`transform bg-[#242427] text-white p-[10px] w-[55px] flex items-center justify-center rounded-[6px] shadow-lg z-10 ${
+            className={`transform bg-[#242427] text-white w-[40px] md:w-[55px] flex items-center justify-center rounded-[6px] shadow-lg z-10 ${
               isRightDisabled ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >
@@ -107,7 +108,7 @@ const ProviderMapping = ({ apiProviderName }) => {
           {allprovider.length > 6 && (
             <p
               onClick={() => navigate(`/game-provider/${encodeData(apiProviderName)}`)}
-              className="transform text-sm bg-[#242427] text-[#A1A1AA] p-[10px] px-6 flex items-center justify-center rounded-[6px] shadow-lg z-10"
+              className="transform text-xs md:text-sm bg-[#242427] text-[#A1A1AA] p-[4px] md:p-[10px] px-4 md:px-6 flex items-center justify-center rounded-[6px] shadow-lg z-10"
             >
               {`View all`}
             </p>
@@ -127,7 +128,7 @@ const ProviderMapping = ({ apiProviderName }) => {
             <div
               key={item?._id}
               onClick={() => handleNavigateProvider(item)}
-              className="min-w-[170px] w-[170px] bg-[#202024] cursor-pointer h-[80px] duration-300 ease-in-out flex items-center justify-center py-3 rounded-[12px] shadow-lg"
+              className="min-w-[120px] md:min-w-[170px] md:w-[170px] bg-[#202024] cursor-pointer h-[80px] duration-300 ease-in-out flex items-center justify-center py-3 rounded-[12px] shadow-lg"
             >
               {item?.image_url ? (
                 <img src={item?.image_url} alt="" className="w-[80px]" />
