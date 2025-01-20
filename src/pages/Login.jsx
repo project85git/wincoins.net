@@ -29,7 +29,8 @@ const Login = () => {
 
         if( email=="user" && password=="12345"){
             navigate("/lobby")
-            localStorage.setItem('isUserAuth',true)
+            localStorage.setItem('isUserAuth', JSON.stringify(true));
+
         }
     };
 

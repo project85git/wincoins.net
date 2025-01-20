@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
     const navigate=useNavigate()
-const isAuth =localStorage.getItem('isUserAuth')
+const isAuth =JSON.parse(localStorage.getItem('isUserAuth'))||false;
 
     const handleLoginRedirect=()=>{
         navigate('/login')
