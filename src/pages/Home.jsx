@@ -18,7 +18,7 @@ import { useNavigate } from 'react-router-dom'
 
 
 const Home = () => {
-  const isAuth = localStorage.getItem("isUserAuth");
+  const isAuth = JSON.parse(localStorage.getItem('isUserAuth'))||false;
     const navigate=useNavigate()
     const buttons = [
         { label: "Jackpots", bgColor: "bg-blue-500" },

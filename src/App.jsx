@@ -15,7 +15,7 @@ import BottomPart from './component/pageComponent/BottomPart'
 function App() {
   const [count, setCount] = useState(0)
   const location = useLocation();
-  const isAuth =localStorage.getItem('isUserAuth')
+  const isAuth =JSON.parse(localStorage.getItem('isUserAuth'))||false;
 const [loading,setLoading]=useState(false)
 const {showSidebar,hideFirstSidebar,halfSidebar,isOpenMobileSidebar}=useSelector((state)=>state?.reusableReducer)
   const navigate=useNavigate()

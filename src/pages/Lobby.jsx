@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { FaGift } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 const Lobby = () => {
-  const isAuth = localStorage.getItem("isUserAuth");
+  const isAuth = JSON.parse(localStorage.getItem('isUserAuth'))||false;
 
   const categoryData = useSelector(
     (state) => state?.reusableReducer?.gameCategory
